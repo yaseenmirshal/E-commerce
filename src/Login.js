@@ -13,10 +13,9 @@ import Swal from 'sweetalert2';
 
 function Login() {
   const inputref = useRef();
-  const {register,user,use,setUse} = useContext(Data)
+  const {user,setUse} = useContext(Data)
   const nav = useNavigate()
   console.log(user);
-
   const clickHandle = (e)=>{
     e.preventDefault()
     let lemail = inputref.current.lemail.value
@@ -42,7 +41,7 @@ function Login() {
       confirmButtonText: 'OK',
     });
   }
-    if(lemail=='admin@gmail.com'&&lpassword==1234){
+    if(lemail==='admin@gmail.com'&&lpassword===1234){
       nav('/admin')
       Swal.fire({
         icon: 'success',
@@ -62,7 +61,7 @@ function Login() {
           <MDBInput required wrapperClass='mb-4' name='lemail' label='Your Email' size='lg' id='form2' type='email'/>
           <MDBInput required wrapperClass='mb-4' name='lpassword' label='Password' size='lg' id='form3' type='password'/>
           <MDBBtn type='submit' className='mb-4 w-100 gradient-custom-4' size='lg'>Login</MDBBtn>
-          <a >Don't have an account?</a><a onClick={()=>nav('/signup')} style={{color:'#6879d0',marginLeft:'5px',fontWeight:'bold',cursor:'pointer'}} ><u> Sign up</u></a>
+          <a href='#'>Don't have an account?</a><a href='#' onClick={()=>nav('/signup')} style={{color:'#6879d0',marginLeft:'5px',fontWeight:'bold',cursor:'pointer'}} ><u> Sign up</u></a>
         </MDBCardBody>
       </MDBCard>
     </MDBContainer>

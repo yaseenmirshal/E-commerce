@@ -18,11 +18,11 @@ export default function Single() {
     const {product,use}=useContext(Data)
     const {id}= useParams()
     console.log(id);
-    const showItems = product.find((x)=>x.id==id)
+    const showItems = product.find((x)=>x.id=== parseInt(id))
     
 
     const cartshow =()=>{
-        let dataofcart =use.cart.find((x)=>x.id==showItems.id)
+        let dataofcart =use.cart.find((x)=>x.id===showItems.id)
         console.log(dataofcart);
         if(!dataofcart){
             use.cart.push(showItems)

@@ -21,13 +21,13 @@ const {use,setRender,render} = useContext(Data)
    const nav = useNavigate()
 
     const increment =(id)=>{
-      const add = use.cart.find((x)=>x.id==id)
+      const add = use.cart.find((x)=>x.id===parseInt(id))
       add.qty += 1
       setRender(!render);  
 
     }
     const decrement =(id)=>{
-      const add = use.cart.find((x)=>x.id==id)
+      const add = use.cart.find((x)=>x.id===parseInt(id))
       if(add.qty>1) {add.qty -= 1
       setRender(!render)}
 
@@ -58,7 +58,7 @@ console.log(use)
               <MDBRow>
                 <MDBCol lg="7">
                   <MDBTypography tag="h5">
-                    <a onClick={()=>nav('/store')} style={{cursor:'pointer'}} className="text-body">
+                    <a href="#" onClick={()=>nav('/store')} style={{cursor:'pointer'}} className="text-body">
                       <MDBIcon  fas icon="long-arrow-alt-left me-2" /> Continue
                       shopping
                     </a>

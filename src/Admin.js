@@ -8,7 +8,6 @@ import { Data } from "./App";
 import './Admin.css';
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { TbTruckDelivery } from "react-icons/tb";
 import {
   MDBCard,
   MDBCardBody,
@@ -99,7 +98,7 @@ const [ItemUpdate,setItemUpdate]=useState({})
   const edit = (e)=>{
     e.preventDefault();
     const temporary = product.map((x)=>
-      x.id == ItemUpdate.id?{
+      x.id === ItemUpdate.id?{
         ...x,
         image:imgref.current.value,
         title:nameref.current.value,
@@ -305,14 +304,14 @@ const [ItemUpdate,setItemUpdate]=useState({})
                       className="bg-image hover-overlay"
                     >
                       <MDBCardImage style={{height:'300px',width:'300px'}} src={x.image} fluid alt="..." />
-                      <a>
+                     
                         <div
                           className="mask"
                           style={{
                             backgroundColor: "rgba(251, 251, 251, 0.15)",
                           }}
                         ></div>
-                      </a>
+                     
                     </MDBRipple>
                     <MDBCardBody>
                       <MDBCardTitle>{x.title}</MDBCardTitle>
@@ -349,7 +348,7 @@ const [ItemUpdate,setItemUpdate]=useState({})
                   </Modal.Header>
                   <form onSubmit={edit}>
                   <Modal.Body>
-                  <img style={{width:'200px',height:'200px',marginLeft:'135px',borderRadius:'5px',marginBottom:'20px'}} src={ItemUpdate.image}/>
+                  <img style={{width:'200px',height:'200px',marginLeft:'135px',borderRadius:'5px',marginBottom:'20px'}}alt="mmm" src={ItemUpdate.image}/>
                   <MDBInput
                               style={{ marginTop: "15px" }}
                               defaultValue={ItemUpdate.image}

@@ -24,12 +24,8 @@ import Swal from 'sweetalert2';
 import Single from "./Single";
 import { DummyProducts } from "./DummyProducts/DummyProducts";
 import Navi from "./navi";
-
-
 export const Data = createContext();
-
 function App() {
-  
   const [product,setProduct] = useState(DummyProducts)
   const [use,setUse] = useState(null) ;
   const [user, setUsers] = useState([]);
@@ -37,19 +33,15 @@ function App() {
   const [render,setRender]=useState(false);
   const [searched,setsearch]= useState('');
   const [locationauth,setlocationauth]=useState(false)
-
   const [show, setShow] = useState(false);
   const location = useLocation()
   useEffect(()=>{
     if(location.pathname.includes(('/admin'))){setlocationauth(true)
-
     }else{
       setlocationauth(false)
     }
     window.scroll(0, 0);
   },[location])
-  
-
   const register = (name, email, pass, confirmpass) => {
     if (
       validateEmail(email) &&
@@ -86,30 +78,23 @@ function App() {
       alert("Please check your input and try again");
     }
   };
-
   return (
     <Data.Provider value={{ register ,user,setUsers,use,setUse,product,setProduct,render,setRender,searched,setsearch,show,setShow}}>
         <div className="App">
          {!locationauth&& <Navi/>}
           <Routes>
-            
-           
             <Route path="/" element={<Navbar />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/addto" element={<Addto />} /> 
-            {/* <Route path="/store" element={<Store />} /> */}
             <Route path="/:type" element={<Store />} />
             <Route path="/:type/:id" element={<Single />} />
             <Route path="/admin" element={<Admin />} />
           </Routes> 
           <Footer />
-         
         </div>
 </Data.Provider>
-    
   );
 }
-
 export default App;
