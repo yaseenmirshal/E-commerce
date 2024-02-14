@@ -24,7 +24,7 @@ function    Store() {
   const {product} = useContext(Data)
   const nav = useNavigate()
   const {type} = useParams()
-  const showItems = product.filter((x)=>x.type===parseInt(type))
+  const showItems = product.filter((x)=>x.type==type)
 
   return (
     <>
