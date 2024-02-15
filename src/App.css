@@ -258,9 +258,120 @@ h1 {
 }
 
 @media screen and (max-width: 767px) {
-  /* Your mobile-specific styles here */
+  .cont{
+    width: 755px !important;
+  }
+  .logimg{
+    width: 755px !important;
+  }
+  input{
+    display: none;
+  }
+  .storediv{
+   width: 755px;
+  }
+  .justify-content-center{
+    width: 720px;
+  }
+  /* .bg-image{
+    width: 755px !important; 
+    height: 889px !important;
+  } */
+  .enjodiv{
+    margin-top: 50px;
+  }
+  .m-5{
+    height: 520px !important;
+  }
+  .navi{
+    margin-top: -50px;
+  }
+  
+  .h-custom{
+    width: 745px;
+    margin-left: 35px;
+  }
+  .mt-5{
+    width: 660px;
+
+  }
+  .demmy{
+    width: 755px;
+  }
+  .butt{
+    width: 100px;
+    margin-left: 300px;
+    margin-top: 750px;
+    width:300px;
+  }
+  .enjodiv{
+   margin-right:-100px;
+  }
+  .divhome{
+    margin-top: 150px;
+    width: 755px;
+    height: 100%;
+    padding-bottom: 25px;
+  }
+  .footer {
+    width:755px;
+  }
+  .mdb{
+    display: none;
+  }
+.enjodiv{
+  margin-left: -180px !important;
+}
+.svg{
+  width:755px;
+  margin-bottom:-155px;
+}
+.card1{
+  margin-bottom: 35px;
+}
+.footer{
+  text-align: left;
+}
+.signup{
+  margin-left: -120px !important;
 }
 
+.navbutt{
+  font-size: 10px;
+  width: 60px;
+}
+/* .cardsto{
+  width: 200px !important;
+} */
+
+.logo{
+  margin-right: -1px !important;
+}
+.homtexts{
+  margin-left: 50px;
+}
+.imgsto{
+  width: 100px !important;
+}
+}
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+
+  .butt {
+    margin-left: 1500px;
+}
+.logo{
+  margin-right: 600px !important;
+}
+.card1{
+  margin:50px;
+}
+
+.divhome{
+  height: 1400px;
+}
+
+}
 .footer {
-  color: white;
+  color :white;
+
 }

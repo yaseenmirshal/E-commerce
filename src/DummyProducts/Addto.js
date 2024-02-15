@@ -46,12 +46,10 @@ console.log(use)
      <div style={{width:'100%',height:'65px',backgroundColor:'white'}}></div>
       
 
-  <section id="payment" className="h-100 h-custom" style={{ backgroundColor: "#eee",overflow:'auto' }}>
+  <section id="payment" className="h-100 h-custom" style={{ backgroundColor: "#ffff",overflow:'auto' }}>
   
     <MDBContainer style={{overflow:'auto'}} className="py-5 h-100">
       <MDBRow  className="justify-content-center align-items-center h-100">
-       
-      
         <MDBCol>
           <MDBCard >
             <MDBCardBody  className="p-4">

@@ -2,6 +2,7 @@ import React from 'react';
 import { MDBInput,  MDBBtn, MDBTextArea } from 'mdb-react-ui-kit';
 
 
+
 export default function Contact() {
   const divStyle = {
     backgroundImage: 'url("https://content.knightfrank.com/blog/2023/3/e934e1bb-7268-48b7-963a-3546d37b1ce0/office-q1-2023-main.jpg")',
@@ -13,7 +14,7 @@ export default function Contact() {
   };
 
   return (
-    <div style={divStyle} >
+    <div style={divStyle} className='cont' >
     <form
       id='form'
       className='text-center'

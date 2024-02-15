@@ -25,7 +25,7 @@ function Signup() {
       e.preventDefault();
       register(name,email,pass,confirmpass)
     }}>
-    <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image' style={{backgroundImage: 'url(https://images6.alphacoders.com/914/914545.jpg)',height:'818px'}}>
+    <MDBContainer fluid className='d-flex align-items-center justify-content-center bg-image logimg' style={{backgroundImage: 'url(https://images6.alphacoders.com/914/914545.jpg)',height:'818px'}}>
       <div className='mask gradient-custom-3'></div>
       <MDBCard className='m-5' style={{maxWidth: '600px'}}>
         <MDBCardBody className='px-5'>
